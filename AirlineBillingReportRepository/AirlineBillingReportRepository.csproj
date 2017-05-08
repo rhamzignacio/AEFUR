@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62A291D1-4DA8-42BE-952D-2D15B3505CF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirlineBillingReportRepository</RootNamespace>
+    <AssemblyName>AirlineBillingReportRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AEFURNoRecord.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AEFURUnbilled.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentProfile.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineBillingEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirlineBillingEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineBillingEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineBillingEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirlineBillingEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineBillingReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineConfiguration.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARInvoiceDetails.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARInvoices.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BilledSummaryReport_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BilledTicket.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C5J_APAnalysis.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditMemoIATAUSD_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditMemoIATA_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currencies.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebitMemoIATAUSD_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebitMemoIATA_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllUnbilled.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllVoided.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IASA_APAnalysis.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IATA.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfInvoiceDetails.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfInvoices.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfSegments.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginLogs.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoRecord.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NoRecordSummaryReport_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAL_APAnalysis.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Posted5JAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostedIASAAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostedPALAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecordNoStorage.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefundsIATAUSD_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefundsIATA_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportModel\UnbilledMonitoringReportByManager.cs" />
+    <Compile Include="Segments.cs">
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketedIATAUSD_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketedIATA_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TravComEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravComEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TravComEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravComEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TravComEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UnbilledMonitoringByAgent_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnbilledMonitoringByManager_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnbilledSummaryReport_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnbilledTicket.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Unposted5JAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnpostedIASAAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnpostedIATAUSD_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnpostedIATA_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnpostedPALAP_Result.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.cs">
+      <DependentUpon>AirlineBillingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\5JApAnalysisViewModel.cs" />
+    <Compile Include="ViewModel\AgentCodeViewModel.cs" />
+    <Compile Include="ViewModel\AirlineConfigurationViewModel.cs" />
+    <Compile Include="ViewModel\BilledTicketViewModel.cs" />
+    <Compile Include="ViewModel\ErrorLogViewModel.cs" />
+    <Compile Include="ViewModel\IASAAPAnalysisViewModel.cs" />
+    <Compile Include="ViewModel\IATAViewModel.cs" />
+    <Compile Include="ViewModel\LoginLogsViewModel.cs" />
+    <Compile Include="ViewModel\NoRecordViewModel.cs" />
+    <Compile Include="ViewModel\PALAPAnalysisViewModel.cs" />
+    <Compile Include="ViewModel\RecordNoStorageViewModel.cs" />
+    <Compile Include="ViewModel\TravcomViewModel.cs" />
+    <Compile Include="ViewModel\TravComViewModelBase.cs" />
+    <Compile Include="ViewModel\UnbilledTicketViewModel.cs" />
+    <Compile Include="ViewModel\UserAccountViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AirlineBillingEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AirlineBillingEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AirlineBillingEntities.edmx.diagram">
+      <DependentUpon>AirlineBillingEntities.edmx</DependentUpon>
+    </None>
+    <None Include="AirlineBillingReportDataSet.xsc">
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirlineBillingReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirlineBillingReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirlineBillingReportDataSet.xss">
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="TravComEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TravComEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TravComEntities.edmx.diagram">
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirlineBillingEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirlineBillingEntities.edmx</DependentUpon>
+      <LastGenOutput>AirlineBillingEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AirlineBillingEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirlineBillingEntities.edmx</DependentUpon>
+      <LastGenOutput>AirlineBillingEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="TravComEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+      <LastGenOutput>TravComEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TravComEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TravComEntities.edmx</DependentUpon>
+      <LastGenOutput>TravComEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

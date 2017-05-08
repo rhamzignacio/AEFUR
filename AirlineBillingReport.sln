@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineBillingReport", "AirlineBillingReport\AirlineBillingReport.csproj", "{72528B1F-922B-4C00-9AF3-017D126E647E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineBillingReportRepository", "AirlineBillingReportRepository\AirlineBillingReportRepository.csproj", "{62A291D1-4DA8-42BE-952D-2D15B3505CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72528B1F-922B-4C00-9AF3-017D126E647E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72528B1F-922B-4C00-9AF3-017D126E647E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72528B1F-922B-4C00-9AF3-017D126E647E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72528B1F-922B-4C00-9AF3-017D126E647E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A291D1-4DA8-42BE-952D-2D15B3505CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A291D1-4DA8-42BE-952D-2D15B3505CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A291D1-4DA8-42BE-952D-2D15B3505CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A291D1-4DA8-42BE-952D-2D15B3505CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

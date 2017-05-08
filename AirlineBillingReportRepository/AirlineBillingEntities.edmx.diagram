@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="918a243bd13e4061b18e4bbca8daa96a" Name="Diagram1" ZoomLevel="89">
+        <EntityTypeShape EntityType="AirlineBillingReportModel.AgentProfile" Width="1.5" PointX="0.75" PointY="14.875" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.AirlineConfiguration" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.BilledTicket" Width="1.5" PointX="7.5" PointY="15.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.ErrorLog" Width="1.5" PointX="7.5" PointY="5.125" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.IATA" Width="1.5" PointX="7.5" PointY="23.5" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.LoginLogs" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.NoRecord" Width="1.5" PointX="7.5" PointY="29.25" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.RecordNoStorage" Width="1.5" PointX="5.25" PointY="17" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.UnbilledTicket" Width="1.5" PointX="7.5" PointY="8.375" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.UserAccount" Width="1.5" PointX="3" PointY="16" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_UserAccount_AgentProfile" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_BilledTicket_RecordNoStorage" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_ErrorLog_RecordNoStorage" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_IATA_RecordNoStorage" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_LoginLogs_UserAccount" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_NoRecord_RecordNoStorage" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_RecordNoStorage_UserAccount" />
+        <AssociationConnector Association="AirlineBillingReportModel.FK_UnbilledTicket_RecordNoStorage" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.PAL_APAnalysis" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.AEFURNoRecord" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.GetAllUnbilled" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.GetAllVoided" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.IASA_APAnalysis" Width="1.5" PointX="10.375" PointY="11.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.C5J_APAnalysis" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AirlineBillingReportModel.AEFURUnbilled" Width="1.5" PointX="12.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

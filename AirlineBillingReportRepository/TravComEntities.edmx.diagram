@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c3356a5a39b487ca5592e154cdf3ff8" Name="Diagram1" ZoomLevel="109">
+        <EntityTypeShape EntityType="TravComModel.ARInvoiceDetails" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.ARInvoices" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.IfInvoiceDetails" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.IfInvoices" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.IfSegments" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.Profiles" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TravComModel.Segments" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TravComModel.Currencies" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TravComModel.AEFURUnbilled" Width="1.5" PointX="11.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

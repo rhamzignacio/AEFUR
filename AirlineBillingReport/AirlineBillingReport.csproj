@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72528B1F-922B-4C00-9AF3-017D126E647E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirlineBillingReport</RootNamespace>
+    <AssemblyName>Automated Extraction For Unbilled Report</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>C:\inetpub\wwwroot\AirlineBillingInstaller\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://192.168.0.3:1002/</InstallUrl>
+    <ProductName>AEFUR</ProductName>
+    <PublisherName>Philscan Travel and Tours</PublisherName>
+    <MinimumRequiredVersion>3.9.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>3.9.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\Icon\Pelfusion-Long-Shadow-Ios7-Air.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7BBC745F34748EE8A733AE4B87246F3B4B93C241</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AirlineBillingReport_2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AirlineBillingReportRepository\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\AirlineBillingReportRepository\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Configuration.Designer.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OpenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\OpenUser.Designer.cs">
+      <DependentUpon>OpenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\UserLogs.Designer.cs">
+      <DependentUpon>UserLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlineBillingReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BilledReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BilledReport.Designer.cs">
+      <DependentUpon>BilledReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IATAPreparationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IATAPreparationReport.Designer.cs">
+      <DependentUpon>IATAPreparationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IATAPreparationUSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IATAPreparationUSD.Designer.cs">
+      <DependentUpon>IATAPreparationUSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\CebuPacificAPAnalysisReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\CebuPacificAPAnalysisReport.Designer.cs">
+      <DependentUpon>CebuPacificAPAnalysisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\IASAAPAnalysisReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\IASAAPAnalysisReport.Designer.cs">
+      <DependentUpon>IASAAPAnalysisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\PALAPAnalysisReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\PALAPAnalysisReport.Designer.cs">
+      <DependentUpon>PALAPAnalysisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Class\AirAsiaProcess.cs" />
+    <Compile Include="Setup\Class\Billed.cs" />
+    <Compile Include="Setup\Class\BillingInstruction.cs" />
+    <Compile Include="Setup\Class\CebuPacificProcess.cs" />
+    <Compile Include="Setup\Class\IASAProcess.cs" />
+    <Compile Include="Setup\Class\IATAProcess.cs" />
+    <Compile Include="Setup\Class\OldIATAProcess.cs" />
+    <Compile Include="Setup\Class\PALProcess.cs" />
+    <Compile Include="Setup\Class\Unbilled.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelection.Designer.cs">
+      <DependentUpon>FormSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingForm\CebuPacificLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm\CebuPacificLoading.Designer.cs">
+      <DependentUpon>CebuPacificLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingForm\PALProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm\PALProcessing.Designer.cs">
+      <DependentUpon>PALProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft\Office\Interop\Excel\ExcelUtlity.cs" />
+    <Compile Include="NoRecordReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoRecordReport.Designer.cs">
+      <DependentUpon>NoRecordReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\BilledMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\BilledMonitoring.Designer.cs">
+      <DependentUpon>BilledMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoring.Designer.cs">
+      <DependentUpon>UnbilledMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoringByAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoringByAgent.Designer.cs">
+      <DependentUpon>UnbilledMonitoringByAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoringByManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operations\UnbilledMonitoringByManager.Designer.cs">
+      <DependentUpon>UnbilledMonitoringByManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordList.Designer.cs">
+      <DependentUpon>RecordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetrieveRecord.Designer.cs">
+      <DependentUpon>RetrieveRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\AirAsiaConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\AirAsiaConfiguration.Designer.cs">
+      <DependentUpon>AirAsiaConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\CebuPacificConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\CebuPacificConfiguration.Designer.cs">
+      <DependentUpon>CebuPacificConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\IASAConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\IASAConfiguration.Designer.cs">
+      <DependentUpon>IASAConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\IATAConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\IATAConfiguration.Designer.cs">
+      <DependentUpon>IATAConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\PhilippineAirlinesConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\PhilippineAirlinesConfiguration.Designer.cs">
+      <DependentUpon>PhilippineAirlinesConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessForm.Designer.cs">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnbilledReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnbilledReport.Designer.cs">
+      <DependentUpon>UnbilledReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityForm\ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityForm\ConfirmationForm.Designer.cs">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityForm\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityForm\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Configuration.resx">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\OpenUser.resx">
+      <DependentUpon>OpenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserLogs.resx">
+      <DependentUpon>UserLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BilledReport.resx">
+      <DependentUpon>BilledReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelection.resx">
+      <DependentUpon>FormSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IATAPreparationReport.resx">
+      <DependentUpon>IATAPreparationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IATAPreparationUSD.resx">
+      <DependentUpon>IATAPreparationUSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm\CebuPacificLoading.resx">
+      <DependentUpon>CebuPacificLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm\PALProcessing.resx">
+      <DependentUpon>PALProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoRecordReport.resx">
+      <DependentUpon>NoRecordReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\BilledMonitoring.resx">
+      <DependentUpon>BilledMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\UnbilledMonitoring.resx">
+      <DependentUpon>UnbilledMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\UnbilledMonitoringByAgent.resx">
+      <DependentUpon>UnbilledMonitoringByAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operations\UnbilledMonitoringByManager.resx">
+      <DependentUpon>UnbilledMonitoringByManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordList.resx">
+      <DependentUpon>RecordList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\CebuPacificAPAnalysisReport.resx">
+      <DependentUpon>CebuPacificAPAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\IASAAPAnalysisReport.resx">
+      <DependentUpon>IASAAPAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\PALAPAnalysisReport.resx">
+      <DependentUpon>PALAPAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BilledSummaryReport.rdlc" />
+    <EmbeddedResource Include="Report\CebuPacificAPAnalysis.rdlc" />
+    <EmbeddedResource Include="Report\IASAAPAnalysis.rdlc" />
+    <EmbeddedResource Include="Report\IATA.rdlc" />
+    <EmbeddedResource Include="Report\IATAUSD.rdlc" />
+    <EmbeddedResource Include="Report\NoRecordSummaryReport.rdlc" />
+    <EmbeddedResource Include="Report\PAL%28PHP%29.rdlc" />
+    <EmbeddedResource Include="Report\PALAPAnalysis.rdlc" />
+    <EmbeddedResource Include="Report\UnbilledMonitoringReportByAgent.rdlc" />
+    <EmbeddedResource Include="Report\UnbilledMonitoringReportByManager.rdlc" />
+    <EmbeddedResource Include="Report\UnbilledSummaryReport.rdlc" />
+    <EmbeddedResource Include="RetrieveRecord.resx">
+      <DependentUpon>RetrieveRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\AirAsiaConfiguration.resx">
+      <DependentUpon>AirAsiaConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\CebuPacificConfiguration.resx">
+      <DependentUpon>CebuPacificConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\IASAConfiguration.resx">
+      <DependentUpon>IASAConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\IATAConfiguration.resx">
+      <DependentUpon>IATAConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\PhilippineAirlinesConfiguration.resx">
+      <DependentUpon>PhilippineAirlinesConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessForm.resx">
+      <DependentUpon>SuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnbilledReport.resx">
+      <DependentUpon>UnbilledReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityForm\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AirlineBillingReportDataSet.xsc">
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirlineBillingReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirlineBillingReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirlineBillingReportDataSet.xss">
+      <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirlineBillingReport_2_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\AirlineBillingReport.Class.Unbilled.datasource" />
+    <None Include="Properties\DataSources\AirlineBillingReportRepository.AirlineBillingReportDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AirlineBillingReportRepository\AirlineBillingReportRepository.csproj">
+      <Name>AirlineBillingReportRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\2000px-AirAsia_New_Logo.svg.png" />
+    <Content Include="Image\Accept-icon.png" />
+    <Content Include="Image\Actions-help-about-icon.png" />
+    <Content Include="Image\Actions-view-list-details-icon.png" />
+    <Content Include="Image\Add-icon.png" />
+    <Content Include="Image\Administrator-icon.png" />
+    <Content Include="Image\Air Asia new b.png" />
+    <Content Include="Image\Applications-Cascade-icon.png" />
+    <Content Include="Image\Apps-session-logout-icon.png" />
+    <Content Include="Image\button-round-arrow-right-icon.png" />
+    <Content Include="Image\cebu-pacific-airlines small.png" />
+    <Content Include="Image\cebu-pacific-airlines.png" />
+    <Content Include="Image\Clear-icon.png" />
+    <Content Include="Image\Close-icon.png" />
+    <Content Include="Image\Gear-icon.png" />
+    <Content Include="Image\hourglass.gif" />
+    <Content Include="Image\IASA LogoNoTag74624C-sm.jpg" />
+    <Content Include="Image\IATA_Logo.svg.png" />
+    <Content Include="Image\Icon\Air-icon.png" />
+    <Content Include="Image\Icon\back.png" />
+    <Content Include="Image\Icon\list-icon.png" />
+    <Content Include="Image\Icon\magnify.gif" />
+    <Content Include="Image\Icon\Pelfusion-Long-Shadow-Ios7-Air.ico" />
+    <Content Include="Image\Icon\processing-center.png" />
+    <Content Include="Image\Icon\question-icon.png" />
+    <Content Include="Image\Icon\ring-alt.gif" />
+    <Content Include="Image\Icon\sales-agent.png" />
+    <Content Include="Image\Icon\search-2.png" />
+    <Content Include="Image\Icon\tiles-icon.png" />
+    <Content Include="Image\Mayor-Ticket-icon.png" />
+    <Content Include="Image\Philippines-airlines-logo-small.jpg" />
+    <Content Include="Image\Philippines-airlines-logo.jpg" />
+    <Content Include="Image\rsz_duplicate.png" />
+    <Content Include="Image\rsz_tick_blank.png" />
+    <Content Include="Image\Save-icon.png" />
+    <Content Include="Image\settings-icon.png" />
+    <Content Include="Image\Start-icon.png" />
+    <Content Include="Image\Status-dialog-password-icon.png" />
+    <Content Include="Image\Upload-Folder-icon.png" />
+    <Content Include="Notes.txt" />
+    <Content Include="Save-icon.png" />
+    <Content Include="settings-icon.png" />
+    <Content Include="Start-icon.png" />
+    <Content Include="Status-dialog-password-icon.png" />
+    <Content Include="Upload-Folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\Background\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

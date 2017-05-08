@@ -1,0 +1,49 @@
+﻿=====AccessRights Code=====
+
+AC = Accounting
+BLM = Manager
+TC = Travel Consultant
+ADM = IT Admin
+
+
+=====RELEASE NOTES=======
+
+version 3.3
+PAL Excel Uploading
+- Upload fixes
+- Auto adjust data reading based on column name
+- Added AP Analysis Report
+
+version 3.4
+IASA Excel Uploading
+- Auto adjust data reading based on column name
+- Added AP Analysis Report
+- Improved data capture accuracy
+
+version 3.4.1
+- Minor UI changes
+- Missing record in PAL AP Analysis fixes
+
+version 3.4.2
+- Missing voided record in PAL AP Analysis fixes
+
+versopm 3.4.3
+- PAL AP Analysis Post column value fixes
+
+version 3.4.4
+- IATA AP Analysis missing ADMA amount fixes
+
+version 3.4.5
+- Added Credit memo in IATA AP Analysis
+
+version 3.5
+Cebu Pacific Excel Uploading
+- Auto adjust data reading based on column name
+- Added AP Analysis report
+- Improved data capture accuracy
+
+version 3.6 (On going)
+Air Asia Excel Uploading
+- Auto adjust data reading based on column name
+- Added AP Analysis Report
+- Improved data capture accuracy
