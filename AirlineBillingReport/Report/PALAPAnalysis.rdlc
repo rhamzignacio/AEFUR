@@ -3127,7 +3127,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Posted</Value>
+                              <Value>With Invoice</Value>
                               <Style>
                                 <Color>Red</Color>
                               </Style>
@@ -4562,7 +4562,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Not Posted</Value>
+                              <Value>No Invoice</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

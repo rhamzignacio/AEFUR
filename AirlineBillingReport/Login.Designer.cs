@@ -115,7 +115,7 @@
             this.lblSystemVersion.Name = "lblSystemVersion";
             this.lblSystemVersion.Size = new System.Drawing.Size(69, 12);
             this.lblSystemVersion.TabIndex = 45;
-            this.lblSystemVersion.Text = "3.9";
+            this.lblSystemVersion.Text = "3.10";
             this.lblSystemVersion.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblSystemVersion.Click += new System.EventHandler(this.lblSystemVersion_Click);
             // 
