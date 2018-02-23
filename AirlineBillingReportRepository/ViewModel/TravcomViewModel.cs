@@ -265,7 +265,6 @@ namespace AirlineBillingReportRepository.ViewModel
                             join s in db.IfSegments on inv.InvoiceDetailID equals s.InvoiceDetailID into qSegment
                             from segment in qSegment.DefaultIfEmpty()
                             where inv.BookingAgentNumber == travcom1 || inv.BookingAgentNumber == travcom2 || inv.BookingAgentNumber == travcom3
-                                || inv.BookingAgentNumber == travcom4 || inv.BookingAgentNumber == travcom5
                             select new Invoice
                             {
                                 RecordType = "Unbilled",

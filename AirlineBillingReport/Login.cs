@@ -186,7 +186,10 @@ namespace AirlineBillingReport
         {
             string patchNotes = "";
 
-            patchNotes += "version 3.8";
+            patchNotes += "version 3.11";
+            patchNotes += "\n-Mistaging of records fixes";
+
+            patchNotes += "\n\nversion 3.8";
             patchNotes += "\n-Fixes in excel extraction";
 
             patchNotes += "\n\nversion 3.7";
@@ -210,10 +213,12 @@ namespace AirlineBillingReport
             patchNotes += "\n\nversion 3.4.3";
             patchNotes += "\n- PAL AP Analysis Post Column value fixes";
 
-            patchNotes += "\n\nversion 3.4.2";
-            patchNotes += "\n- Missing voided record in PAL AP Analysis fixes";
-
            MessageBox.Show(patchNotes, "Release Notes version " + lblSystemVersion.Text);
+        }
+
+        private void lblErrorMessage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
