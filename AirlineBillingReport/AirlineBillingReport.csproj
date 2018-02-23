@@ -75,10 +75,11 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7BBC745F34748EE8A733AE4B87246F3B4B93C241</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0A93875C81A53946D09E1617DA40CC11B0DA7FFA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>AirlineBillingReport_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -478,7 +479,7 @@
     <None Include="AirlineBillingReportDataSet.xss">
       <DependentUpon>AirlineBillingReportDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AirlineBillingReport_2_TemporaryKey.pfx" />
+    <None Include="AirlineBillingReport_1_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\AirlineBillingReport.Class.Unbilled.datasource" />
